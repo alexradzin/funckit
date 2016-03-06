@@ -9,9 +9,9 @@
 		<artifactId>funckit</artifactId>
 		<version>0.1-SNAPSHOT</version>
 	</parent>
-	<artifactId>funckit-guava-base</artifactId>
+	<artifactId>funckit-guava-test</artifactId>
 	<packaging>jar</packaging>
-	<name>funckit-guava-base</name>
+	<name>funckit-guava-test</name>
 	
 	
 	
@@ -36,7 +36,7 @@
 		
 		<dependency>
 			<groupId>org.funckit</groupId>
-			<artifactId>funckit-base</artifactId>
+			<artifactId>funckit-guava-base</artifactId>
 			<version>0.1-SNAPSHOT</version>
 		</dependency>
 
@@ -46,13 +46,6 @@
 			<version>0.1-SNAPSHOT</version>
 		</dependency>
 
-		<dependency>
-			<groupId>org.funckit</groupId>
-			<artifactId>funckit-base</artifactId>
-			<version>0.1-SNAPSHOT</version>
-			<type>test-jar</type>
-			<scope>test</scope>
-		</dependency>
 		
 		
 	</dependencies>

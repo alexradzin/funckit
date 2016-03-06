@@ -9,52 +9,17 @@
 		<artifactId>funckit</artifactId>
 		<version>0.1-SNAPSHOT</version>
 	</parent>
-	<artifactId>funckit-guava-base</artifactId>
+	<artifactId>funckit-core</artifactId>
 	<packaging>jar</packaging>
-	<name>funckit-guava-base</name>
+	<name>funckit-core</name>
 	
-	
-	
-
-	<properties>
-		<guava.version>19.0</guava.version>
-		<commons.lang.version>3.4</commons.lang.version>
-	</properties>
-
 	<dependencies>
 		<dependency>
-			<groupId>com.google.guava</groupId>
-			<artifactId>guava</artifactId>
-			<version>${guava.version}</version>
-		</dependency>	
-		
-		<dependency>
-			<groupId>org.apache.commons</groupId>
-			<artifactId>commons-lang3</artifactId>
-			<version>${commons.lang.version}</version>
-		</dependency>
-		
-		<dependency>
 			<groupId>org.funckit</groupId>
-			<artifactId>funckit-base</artifactId>
+			<artifactId>funckit-dev-base</artifactId>
 			<version>0.1-SNAPSHOT</version>
+			<scope>provided</scope>
 		</dependency>
-
-		<dependency>
-			<groupId>org.funckit</groupId>
-			<artifactId>funckit-core</artifactId>
-			<version>0.1-SNAPSHOT</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.funckit</groupId>
-			<artifactId>funckit-base</artifactId>
-			<version>0.1-SNAPSHOT</version>
-			<type>test-jar</type>
-			<scope>test</scope>
-		</dependency>
-		
-		
 	</dependencies>
 
 	<build>

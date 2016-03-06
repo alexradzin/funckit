@@ -17,7 +17,14 @@
 	</properties>
 
 	<modules>
+		<module>funckit-base</module>
+		<module>funckit-core</module>
+		
+		<module>funckit-dev-interface</module>
+		<module>funckit-dev-base</module>
+		
 		<module>funckit-guava-base</module>
+		<module>funckit-guava-test</module>
 	</modules>
 
 	<dependencies>
