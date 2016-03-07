@@ -25,6 +25,12 @@
 		
 		<module>funckit-guava-base</module>
 		<module>funckit-guava-test</module>
+		
+		<module>funckit-commons-collections-base</module>
+		<module>funckit-commons-collections-test</module>
+
+		<module>funckit-commons-collections4-base</module>
+		<module>funckit-commons-collections4-test</module>
 	</modules>
 
 	<dependencies>
