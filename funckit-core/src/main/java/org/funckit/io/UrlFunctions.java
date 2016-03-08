@@ -23,11 +23,11 @@ public class UrlFunctions {
 
 	public static final BaseAction<URL, URLConnection> urlConnection = new BaseAction<URL, URLConnection>() {
 		@Override
-		public URLConnection execute(URL url) {
+		public URLConnection execute(URL u) {
 			try {
-				return url.openConnection();
+				return u.openConnection();
 			} catch (IOException e) {
-				throw new IllegalStateException(String.valueOf(url), e);
+				throw new IllegalStateException(String.valueOf(u), e);
 			}
 		}
 	};

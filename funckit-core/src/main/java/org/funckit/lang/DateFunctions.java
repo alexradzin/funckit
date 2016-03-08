@@ -15,8 +15,8 @@ public class DateFunctions {
 
 	public static final BaseAction<Date, Long> time = new BaseAction<Date, Long>() {
 		@Override
-		public Long execute(Date date) {
-			return date.getTime();
+		public Long execute(Date d) {
+			return d.getTime();
 		}
 	};
 
@@ -29,31 +29,31 @@ public class DateFunctions {
 
 	public static final BaseAction<java.sql.Date, Long> sqlTime = new BaseAction<java.sql.Date, Long>() {
 		@Override
-		public Long execute(java.sql.Date date) {
-			return date.getTime();
+		public Long execute(java.sql.Date d) {
+			return d.getTime();
 		}
 	};
 	
 	public static final BaseAction<Date, java.sql.Date> toSqlDate = new BaseAction<Date, java.sql.Date>() {
 		@Override
-		public java.sql.Date execute(Date date) {
-			return new java.sql.Date(date.getTime());
+		public java.sql.Date execute(Date d) {
+			return new java.sql.Date(d.getTime());
 		}
 	};
 	
 	public static final BaseAction<java.sql.Date, Date> fromSqlDate = new BaseAction<java.sql.Date, Date>() {
 		@Override
-		public Date execute(java.sql.Date date) {
-			return new Date(date.getTime());
+		public Date execute(java.sql.Date d) {
+			return new Date(d.getTime());
 		}
 	};
 	
 
 	public static final BaseAction<Date, Calendar> calendarForDate = new BaseAction<Date, Calendar>() {
 		@Override
-		public Calendar execute(Date date) {
+		public Calendar execute(Date d) {
 			Calendar calendar = Calendar.getInstance();
-			calendar.setTime(date);
+			calendar.setTime(d);
 			return calendar;
 		}
 	};

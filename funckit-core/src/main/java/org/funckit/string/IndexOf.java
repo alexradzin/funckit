@@ -18,6 +18,7 @@ abstract class IndexOf<S extends CharSequence, T> extends BaseAction<S, Integer>
 		this.fromIndex = fromIndex;
 	}
 
+	@Override
 	public abstract Integer execute(S str);
 
 	

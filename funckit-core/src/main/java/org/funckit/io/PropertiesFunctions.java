@@ -9,11 +9,11 @@ import org.funckit.common.BaseAction;
 public class PropertiesFunctions {
 	public static final BaseAction<InputStream, Properties> load() {
 		return new  PropertiesLoader();
-	};
+	}
 	
 	public static final BaseAction<InputStream, Properties> load(Properties properties) {
 		return new  PropertiesLoader(properties);
-	};
+	}
 	
 	private static class PropertiesLoader extends BaseAction<InputStream, Properties> {
 		private final Properties properties;

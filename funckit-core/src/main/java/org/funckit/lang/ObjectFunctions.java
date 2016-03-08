@@ -1,6 +1,7 @@
 package org.funckit.lang;
 
 import org.funckit.common.BaseAction;
+import org.funckit.common.BaseCondition;
 
 
 public class ObjectFunctions {
@@ -24,7 +25,7 @@ public class ObjectFunctions {
 				return (Class<T>)obj.getClass();
 			}
 		};
-	};
+	}
 	
 	
 	public static final BaseAction<Object, Void> notifyFunction = new BaseAction<Object, Void>() {
@@ -85,6 +86,10 @@ public class ObjectFunctions {
 				}
 			}
 		};
-	} 
+	}
+	
+	public static final <T, F> BaseCondition<T> checkField(BaseAction<T, F> fieldAccessor, BaseCondition<F> fieldCondition) {
+		return new FieldPredicate<T, F>(fieldAccessor, fieldCondition);
+	}
 	
 }

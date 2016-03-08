@@ -71,5 +71,5 @@ public class CastingFunctions {
 				return (T)value;
 			}
 		};
-	};
+	}
 }

@@ -24,22 +24,26 @@ public class PatternFunctions {
 	}
 	
 
-	public static final BaseAction<String, String> group(Pattern pattern, int group) {
-		return null;
+	public static final BaseAction<CharSequence, String> group(final Pattern p, final int group) {
+		return new BaseAction<CharSequence, String>(p, group) {
+			@Override
+			public String execute(CharSequence input) {
+				Matcher m = p.matcher(input);
+				m.find();
+				return m.group(group);
+			}
+		};
 	}
 	
-	public static final BaseAction<String, Matcher> matcher(Pattern pattern) {
-		return null;
-	}
 	
-//	public static final BaseAction<CharSequence, Matcher> matcher(final Pattern pattern) {
-//		return new BaseAction<CharSequence, Matcher>() {
-//			@Override
-//			public Matcher execute(CharSequence input) {
-//				return pattern.matcher(input);
-//			}
-//		};
-//	}
+	public static final BaseAction<CharSequence, Matcher> matcher(final Pattern p) {
+		return new BaseAction<CharSequence, Matcher>(p) {
+			@Override
+			public Matcher execute(CharSequence input) {
+				return p.matcher(input);
+			}
+		};
+	}
 
 
 	public static final BaseAction<Map.Entry<Pattern, Integer>, String> group(final CharSequence input) {
@@ -57,8 +61,8 @@ public class PatternFunctions {
 	public static final BaseAction<Pattern, Matcher> matcher(final CharSequence input) {
 		return new BaseAction<Pattern, Matcher>() {
 			@Override
-			public Matcher execute(Pattern pattern) {
-				return pattern.matcher(input);
+			public Matcher execute(Pattern p) {
+				return p.matcher(input);
 			}
 		};
 	}

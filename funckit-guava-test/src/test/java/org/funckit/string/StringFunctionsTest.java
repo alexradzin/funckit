@@ -32,7 +32,7 @@ public class StringFunctionsTest {
 	
 	private void length(String str, int expectedLength) {
 		assertEquals(expectedLength, length.apply(str).intValue());
-		assertEquals(expectedLength, stringLength().apply(str).intValue());
+		assertEquals(expectedLength, stringLength.apply(str).intValue());
 	}
 
 }

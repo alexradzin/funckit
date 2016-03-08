@@ -15,7 +15,7 @@ public class StringPredicates {
 				return str.contains(s);
 			}
 		};
-	};
+	}
 	
 	public static final BaseCondition<String> equalsTo(final Object s) {
 		return new BaseCondition<String>() {
@@ -24,7 +24,7 @@ public class StringPredicates {
 				return str.equals(s);
 			}
 		};
-	};
+	}
 	
 	public static final BaseCondition<String> equalsIgnoreCase(final String s) {
 		return new BaseCondition<String>() {
@@ -33,7 +33,7 @@ public class StringPredicates {
 				return str.equalsIgnoreCase(s);
 			}
 		};
-	};
+	}
 	
 	
 	public static final BaseCondition<CharSequence> matches(final Pattern pattern) {
@@ -55,7 +55,7 @@ public class StringPredicates {
 				return str.startsWith(prefix);
 			}
 		};
-	};
+	}
 	
 	public static final BaseCondition<String> endsWith(final String suffix) {
 		return new BaseCondition<String>() {
@@ -64,8 +64,13 @@ public class StringPredicates {
 				return str.startsWith(suffix);
 			}
 		};
-	};
+	}
+
 	
-	//TODO:
-	// parseInt, parseLong etc
+	public static final BaseCondition<String> isEmpty = new BaseCondition<String>() {
+		@Override
+		public boolean check(String str) {
+			return str.isEmpty();
+		}
+	};
 }
