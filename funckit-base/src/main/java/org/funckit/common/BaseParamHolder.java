@@ -10,7 +10,7 @@ public abstract class BaseParamHolder {
 	}
 	
 	
-	protected Object[] getParameters() {
+	protected final Object[] getParameters() {
 		return params;
 	}
 	
